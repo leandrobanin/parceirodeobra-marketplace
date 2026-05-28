@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How it Works | Obra Certa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .step-number {
+            -webkit-text-stroke: 1px currentColor;
+            color: transparent;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f0f3ff",
+                      "secondary-fixed-dim": "#c0c6db",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "primary-container": "#f59e0b",
+                      "on-primary-fixed": "#2a1700",
+                      "inverse-surface": "#2a313d",
+                      "surface": "#f9f9ff",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed-variant": "#653e00",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#002113",
+                      "primary-fixed-dim": "#ffb95f",
+                      "on-secondary-fixed": "#141b2b",
+                      "error": "#ba1a1a",
+                      "surface-container": "#e7eefe",
+                      "surface-bright": "#f9f9ff",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "on-tertiary-container": "#004e34",
+                      "tertiary": "#006c49",
+                      "surface-container-highest": "#dce2f3",
+                      "tertiary-fixed": "#6ffbbe",
+                      "surface-tint": "#855300",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#e2e8f8",
+                      "inverse-primary": "#ffb95f",
+                      "secondary-fixed": "#dce2f7",
+                      "error-container": "#ffdad6",
+                      "primary": "#855300",
+                      "on-secondary-fixed-variant": "#404758",
+                      "inverse-on-surface": "#ebf1ff",
+                      "outline-variant": "#d8c3ad",
+                      "on-primary-container": "#613b00",
+                      "background": "#f9f9ff",
+                      "on-secondary-container": "#5c6274",
+                      "primary-fixed": "#ffddb8",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#30c88f",
+                      "secondary": "#575e70",
+                      "on-surface": "#151c27",
+                      "secondary-container": "#d9dff5",
+                      "outline": "#867461",
+                      "surface-dim": "#d3daea",
+                      "on-background": "#151c27",
+                      "on-surface-variant": "#534434",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#dce2f3"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "xxl": "48px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "container-max": "1280px",
+                      "xl": "32px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "label-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "display-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline h-20 transition-all duration-300">
+<div class="max-w-container-max mx-auto px-lg flex justify-between items-center h-full">
+<div class="flex items-center gap-xl">
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim" href="#">Obra Certa</a>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md" href="#">Find Services</a>
+<a class="text-primary dark:text-primary-fixed border-b-2 border-primary pb-1 text-label-md font-label-md" href="#">How it Works</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors text-label-md font-label-md" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden md:block text-primary font-label-md px-md py-sm hover:opacity-80 transition-all">Pro Login</button>
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-lg font-label-md hover:opacity-90 transition-all">Find a Pro</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-surface-container-low py-xxl overflow-hidden">
+<div class="max-w-container-max mx-auto px-lg relative z-10 text-center">
+<span class="inline-block px-md py-xs bg-primary-fixed text-on-primary-fixed rounded-full text-label-sm font-label-sm mb-md uppercase tracking-wider">The Marketplace Guide</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-lg">Simple. Professional. <span class="text-primary">Reliable.</span></h1>
+<p class="max-w-2xl mx-auto text-body-lg text-on-surface-variant mb-xl">Whether you're looking to hire the best talent or grow your service business, Obra Certa provides the tools you need to build with confidence.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-md">
+<a class="bg-primary-container text-on-primary-container px-xl py-md rounded-xl font-label-md flex items-center justify-center gap-sm hover:scale-[1.02] transition-transform" href="#customers">
+                        I am a Customer <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+<a class="bg-surface-container-highest text-on-surface px-xl py-md rounded-xl font-label-md flex items-center justify-center gap-sm hover:scale-[1.02] transition-transform" href="#professionals">
+                        I am a Professional <span class="material-symbols-outlined">arrow_downward</span>
+</a>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-primary-container opacity-10 rounded-full blur-3xl"></div>
+</section>
+<!-- Path Selector Tabs (Sticky) -->
+<div class="sticky top-20 bg-surface/80 backdrop-blur-md z-40 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-lg flex justify-center">
+<div class="flex gap-xxl">
+<a class="py-lg border-b-2 border-transparent hover:text-primary transition-all font-label-md text-label-md active-tab" href="#customers" id="tab-customers">For Customers</a>
+<a class="py-lg border-b-2 border-transparent hover:text-primary transition-all font-label-md text-label-md" href="#professionals" id="tab-professionals">For Professionals</a>
+</div>
+</div>
+</div>
+<!-- For Customers Section -->
+<section class="py-xxl bg-surface scroll-mt-40" id="customers">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="mb-xxl text-center max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-md">For Customers</h2>
+<p class="text-body-md text-on-surface-variant">Find the right expertise for your project in three easy steps. We handle the verification and security so you can focus on your vision.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+<!-- Step 1 -->
+<div class="group relative bg-white border border-outline-variant p-xl rounded-xl transition-all duration-300 hover:shadow-lg">
+<div class="step-number text-display-lg font-bold opacity-10 absolute top-4 right-6 group-hover:opacity-20 transition-opacity">01</div>
+<div class="w-14 h-14 bg-primary-container/10 text-primary rounded-xl flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-[32px]">search</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Search</h3>
+<p class="text-body-md text-on-surface-variant mb-lg leading-relaxed">Browse thousands of verified professionals. Filter by category, location, and specific service needs to find your perfect match.</p>
+<div class="rounded-lg overflow-hidden border border-outline-variant bg-surface-container-low aspect-video">
+<img alt="Search Interface" class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700" data-alt="A high-end modern digital interface showing a professional property service search page. The screen features a clean search bar with 'Plumbing' and 'New York' as parameters, with premium-looking service cards appearing below. The lighting is soft and corporate, utilizing the Obra Certa construction yellow as a primary interactive accent. The overall aesthetic is professional SaaS and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq4wLdgu19apXq2EtQxkcv05skQxjOlcYHseZWpbSctsDkZw0yUGv5_TTQBbEkuuL5OW5_nwjsPgGlvSaoSUzLNXznbwlM_xQC-YLzurO7znT0_eO61Hdk51Txnt4-GfzPTdSqh3C3uJBHzp6kUYYzphrrZAFKPt7lyjkmxfm30umqJxnE6wxqZkqt0iJw2OjtVPX1qiHTZxDRXihZsoLfnmGk9NWCEvehF9r7wdhkTQtfROHh4kS6J3wBMkV1jWCvQnWgkkQL6Lcr"/>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="group relative bg-white border border-outline-variant p-xl rounded-xl transition-all duration-300 hover:shadow-lg">
+<div class="step-number text-display-lg font-bold opacity-10 absolute top-4 right-6 group-hover:opacity-20 transition-opacity">02</div>
+<div class="w-14 h-14 bg-primary-container/10 text-primary rounded-xl flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-[32px]">fact_check</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Compare</h3>
+<p class="text-body-md text-on-surface-variant mb-lg leading-relaxed">Review comprehensive portfolios, authenticated customer ratings, and request detailed quotes to ensure quality and budget alignment.</p>
+<div class="rounded-lg overflow-hidden border border-outline-variant bg-surface-container-low aspect-video">
+<img alt="Comparison Tool" class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated digital dashboard comparing two professional construction quotes side-by-side. The interface is clean, white, and organized with clear price breakdowns and five-star rating components in construction yellow. Professional profile avatars are displayed with a 12px border radius. The atmosphere is professional, organized, and provides a sense of reliability and transparency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgK-88nC8fQwgujWs31h9MTaRfQZE40N11Q-e95dEjCJKFfCBSzVdzaYb55ae3NCXe0YqKLKEF7xPH7MEd-b7VNlnTZrPNmbF1puYaYzsb2fVK6GmzM7B_yaLQAOHU8C3u9CzUuJznMioWENBVEisp8n0KYom9K7Y4-zcrpEHiMXkahp8dw9OCLzZ3UgNISwFTr7eN-S4Tqg-A62egoGQ1By2YGntdzPCp5rntqFLI12brfXlWUOjRRdyUlpjFvWhJjsl_fb_ku9YP"/>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="group relative bg-white border border-outline-variant p-xl rounded-xl transition-all duration-300 hover:shadow-lg">
+<div class="step-number text-display-lg font-bold opacity-10 absolute top-4 right-6 group-hover:opacity-20 transition-opacity">03</div>
+<div class="w-14 h-14 bg-primary-container/10 text-primary rounded-xl flex items-center justify-center mb-lg">
+<span class="material-symbols-outlined text-[32px]">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-md">Hire &amp; Pay</h3>
+<p class="text-body-md text-on-surface-variant mb-lg leading-relaxed">Securely hire through our platform. Payments are held in escrow and only released when the project milestones are completed.</p>
+<div class="rounded-lg overflow-hidden border border-outline-variant bg-surface-container-low aspect-video">
+<img alt="Secure Payment" class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700" data-alt="A high-quality close-up of a secure digital payment confirmation screen on a smartphone. The interface displays 'Payment Secured' with a large checkmark icon in primary amber yellow. The background is a clean white professional workspace. The mood is calm and trust-inducing, emphasizing financial security and high-end property service management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAldC_KgB-yJ9uAQC5MKsaf-ShzH5QHHc-t4-hAbdzVNsPxCbJxH8LFIS12wJuxGnlAhfP95hGAkL7PEIqXT0CnEE4KJNGWyUiZzKRrQ2tFx6MdhGA2z9I9M5NWN8ct9cKrhYzd_zrBQhXzsnqY3j6Ll2AzxQUjw_nsITjVnGfXDikxki3glMdjOj3poMBieqm2u9Es9Bo29siY1lN1mdJL8zXYyQHgnJbTW3KVKepevYy6bgZ8k5V4VR3ULfZVcyjyFCdixE4W63Dj"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Path Section -->
+<section class="py-xxl bg-surface-container-low scroll-mt-40" id="professionals">
+<div class="max-w-container-max mx-auto px-lg">
+<div class="flex flex-col lg:flex-row items-center gap-xxl mb-xxl">
+<div class="lg:w-1/2">
+<span class="text-primary font-label-md mb-md block">For Professionals</span>
+<h2 class="font-headline-lg text-headline-lg mb-lg">Take your business to the next level</h2>
+<p class="text-body-lg text-on-surface-variant mb-xl leading-relaxed">Join a network of elite property service professionals. We provide the infrastructure; you provide the excellence.</p>
+<!-- Accordion Style Steps -->
+<div class="space-y-md">
+<div class="bg-white border border-outline-variant p-md rounded-xl flex gap-md items-start">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary shrink-0 flex items-center justify-center font-bold">1</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Create Profile</h4>
+<p class="text-body-md text-on-surface-variant">Sign up and showcase your portfolio, certifications, and skills to a vast pool of potential clients.</p>
+</div>
+</div>
+<div class="bg-white border border-outline-variant p-md rounded-xl flex gap-md items-start">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary shrink-0 flex items-center justify-center font-bold">2</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Get Leads</h4>
+<p class="text-body-md text-on-surface-variant">Receive curated project inquiries from local customers that match your specific expertise and availability.</p>
+</div>
+</div>
+<div class="bg-white border border-outline-variant p-md rounded-xl flex gap-md items-start">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary shrink-0 flex items-center justify-center font-bold">3</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-xs">Grow Business</h4>
+<p class="text-body-md text-on-surface-variant">Build your reputation with reviews, manage invoices, and increase your earnings with our business tools.</p>
+</div>
+</div>
+</div>
+<button class="mt-xl bg-primary text-on-primary px-xl py-md rounded-xl font-label-md shadow-lg hover:shadow-xl transition-all">Start Your Pro Application</button>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="relative z-10 rounded-xxl overflow-hidden border-[8px] border-white shadow-2xl">
+<img alt="Professional at Work" class="w-full h-auto aspect-[4/5] object-cover" data-alt="A professional contractor in high-end workwear looking at a tablet screen in a bright, modern interior space. The tablet displays the Obra Certa professional dashboard with analytics and new project leads. The lighting is natural and bright, conveying a sense of success, professionalism, and modern business management in the property service industry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCm9WUhY0na0UMDKn9FJsuUihQEJMeTkVxhTP6gN4Rf82VRp6xRqZ7D_S4GHYFGU316TIvIptqCZBnh1Nrg0e5jz_qz3sDYUMA4ACLYuyyByp0KIctxaS65TuK6OpeJigTh01KjyKHUNwqCzP8uVv4yDmNSc1g_5cU2K8YcR6lw8ndZc8yB1n_eObmJZSejJMLEuWjeH5bWJuznmu7B1HgGM98b2EpKr7SVbBsHuldMY8uLClbQ-xoVUkdEMfXXTlFmRnCDUOskeFgm"/>
+</div>
+<!-- Floating Achievement Chip -->
+<div class="absolute -bottom-6 -left-6 z-20 bg-white p-md rounded-xl shadow-xl flex items-center gap-md border border-outline-variant animate-bounce">
+<div class="w-12 h-12 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Earnings Increase</p>
+<p class="text-headline-md font-bold text-tertiary">+42% Avg.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xxl bg-surface">
+<div class="max-w-3xl mx-auto px-lg">
+<div class="text-center mb-xxl">
+<h2 class="font-headline-lg text-headline-lg mb-md">Frequently Asked Questions</h2>
+<p class="text-body-md text-on-surface-variant">Everything you need to know about getting started on Obra Certa.</p>
+</div>
+<div class="space-y-md">
+<!-- FAQ Item 1 -->
+<div class="border border-outline-variant rounded-xl overflow-hidden bg-white">
+<button class="w-full px-lg py-xl text-left flex justify-between items-center hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-label-md text-label-md text-on-surface">How do you verify professional credentials?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="hidden px-lg pb-xl text-body-md text-on-surface-variant leading-relaxed">
+                            Every professional on Obra Certa undergoes a multi-step verification process, including background checks, license verification, and portfolio authentication. We only partner with specialists who meet our high standards for property maintenance and renovation excellence.
+                        </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="border border-outline-variant rounded-xl overflow-hidden bg-white">
+<button class="w-full px-lg py-xl text-left flex justify-between items-center hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-label-md text-label-md text-on-surface">Is my payment secure on the platform?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="hidden px-lg pb-xl text-body-md text-on-surface-variant leading-relaxed">
+                            Yes. We use an escrow-style payment system. When you hire a professional, your funds are securely held by Obra Certa. We release the payment only after you've confirmed that the project milestones have been met and you are satisfied with the work.
+                        </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border border-outline-variant rounded-xl overflow-hidden bg-white">
+<button class="w-full px-lg py-xl text-left flex justify-between items-center hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-label-md text-label-md text-on-surface">What if a project doesn't go as planned?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="hidden px-lg pb-xl text-body-md text-on-surface-variant leading-relaxed">
+                            Our 'Trust &amp; Safety' team is here to help. We offer mediation services for any disputes and provide a limited satisfaction guarantee on all projects managed entirely through our platform.
+                        </div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border border-outline-variant rounded-xl overflow-hidden bg-white">
+<button class="w-full px-lg py-xl text-left flex justify-between items-center hover:bg-surface-container-low transition-colors group" onclick="toggleFaq(this)">
+<span class="font-label-md text-label-md text-on-surface">How much does it cost for professionals to join?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</button>
+<div class="hidden px-lg pb-xl text-body-md text-on-surface-variant leading-relaxed">
+                            Creating a profile is free. We operate on a lead-based or commission model depending on your industry category. This ensures that you only pay when you are actually gaining business opportunities through our network.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-xxl bg-on-surface text-surface text-center">
+<div class="max-w-container-max mx-auto px-lg">
+<h2 class="font-headline-lg text-headline-lg mb-lg">Ready to transform your property?</h2>
+<p class="text-body-lg text-surface-variant mb-xl max-w-xl mx-auto">Join thousands of homeowners and professionals building the future of property services.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-md">
+<button class="bg-primary-container text-on-primary-container px-xl py-md rounded-xl font-label-md hover:scale-105 transition-all">Find a Professional</button>
+<button class="bg-surface/10 text-surface border border-surface/20 px-xl py-md rounded-xl font-label-md hover:bg-surface/20 transition-all">Register as a Pro</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xxl px-lg flex flex-col items-center gap-lg max-w-container-max mx-auto bg-surface-container-high dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between w-full gap-xl">
+<div class="flex flex-col gap-md max-w-sm">
+<span class="text-headline-lg font-headline-lg text-primary">Obra Certa</span>
+<p class="text-body-md text-on-surface-variant">The premium marketplace for property maintenance and professional construction services.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-xl">
+<div class="flex flex-col gap-sm">
+<span class="font-bold text-on-surface">Company</span>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-body-md" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-body-md" href="#">Trust &amp; Safety</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-bold text-on-surface">Legal</span>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-body-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-body-md" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-bold text-on-surface">Support</span>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-body-md" href="#">Contact Support</a>
+<a class="text-on-surface-variant hover:text-primary underline transition-all text-body-md" href="#">FAQ</a>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-outline-variant pt-lg mt-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 Obra Certa. Professional Property Services.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+</footer>
+<script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+                button.classList.add('bg-surface-container-low');
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+                button.classList.remove('bg-surface-container-low');
+            }
+        }
+
+        // Active State Logic for Navigation
+        window.addEventListener('scroll', () => {
+            const sections = ['customers', 'professionals'];
+            const scrollPos = window.scrollY + 200;
+
+            sections.forEach(id => {
+                const element = document.getElementById(id);
+                const tab = document.getElementById('tab-' + id);
+                if (scrollPos >= element.offsetTop && scrollPos < element.offsetTop + element.offsetHeight) {
+                    tab.classList.add('text-primary', 'border-primary');
+                    tab.classList.remove('text-on-surface-variant', 'border-transparent');
+                } else {
+                    tab.classList.remove('text-primary', 'border-primary');
+                    tab.classList.add('text-on-surface-variant', 'border-transparent');
+                }
+            });
+
+            // Sticky Header Elevation
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

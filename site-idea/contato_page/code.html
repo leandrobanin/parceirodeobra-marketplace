@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contato - Obra Certa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#2a313d",
+                      "inverse-on-surface": "#ebf1ff",
+                      "surface-container-low": "#f0f3ff",
+                      "surface-dim": "#d3daea",
+                      "surface-variant": "#dce2f3",
+                      "on-secondary-fixed": "#141b2b",
+                      "tertiary-fixed": "#6ffbbe",
+                      "tertiary": "#006c49",
+                      "surface": "#f9f9ff",
+                      "on-secondary-fixed-variant": "#404758",
+                      "surface-bright": "#f9f9ff",
+                      "on-tertiary-container": "#004e34",
+                      "secondary-container": "#d9dff5",
+                      "background": "#f9f9ff",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "primary-fixed-dim": "#ffb95f",
+                      "primary-container": "#f59e0b",
+                      "on-secondary-container": "#5c6274",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#d8c3ad",
+                      "on-primary-fixed": "#2a1700",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#ffddb8",
+                      "error-container": "#ffdad6",
+                      "on-background": "#151c27",
+                      "surface-container-high": "#e2e8f8",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "on-tertiary-fixed": "#002113",
+                      "on-surface": "#151c27",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#c0c6db",
+                      "secondary-fixed": "#dce2f7",
+                      "outline": "#867461",
+                      "on-primary-fixed-variant": "#653e00",
+                      "surface-container-highest": "#dce2f3",
+                      "secondary": "#575e70",
+                      "surface-container-lowest": "#ffffff",
+                      "primary": "#855300",
+                      "on-surface-variant": "#534434",
+                      "surface-tint": "#855300",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#30c88f",
+                      "inverse-primary": "#ffb95f",
+                      "on-primary-container": "#613b00",
+                      "surface-container": "#e7eefe",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "lg": "24px",
+                      "base": "8px",
+                      "xxl": "48px",
+                      "container-max": "1280px",
+                      "md": "16px",
+                      "xs": "4px",
+                      "sm": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "display-lg-mobile": ["Plus Jakarta Sans"],
+                      "label-md": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f9f9ff;
+            color: #151c27;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .contact-card-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f3ff 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-lg h-20 max-w-container-max mx-auto left-0 right-0">
+<div class="flex items-center gap-xl">
+<span class="text-headline-md font-headline-md font-bold text-primary">Obra Certa</span>
+<nav class="hidden md:flex gap-lg">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Find Services</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">How it Works</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-md">
+<button class="hidden sm:block text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors">Pro Login</button>
+<button class="bg-primary-container text-on-primary-container px-lg py-sm rounded-lg font-label-md text-label-md hover:opacity-90 transition-all">Find a Pro</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="bg-surface-container-lowest py-xxl px-lg">
+<div class="max-w-container-max mx-auto text-center space-y-md">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-surface">Entre em Contato</h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Estamos aqui para ajudar você a transformar seus projetos em realidade. 
+                    Nossa equipe de suporte está disponível para responder a qualquer dúvida sobre nossos serviços e profissionais.
+                </p>
+</div>
+</section>
+<!-- Main Layout: Form & Info -->
+<section class="max-w-container-max mx-auto px-lg py-xxl">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xxl">
+<!-- Left Column: Contact Form -->
+<div class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm transition-all hover:shadow-md">
+<form class="space-y-lg" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="space-y-xs">
+<label class="text-label-md font-label-md text-on-surface-variant" for="name">Nome Completo</label>
+<input class="w-full h-12 px-md bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="name" placeholder="Seu nome" required="" type="text"/>
+</div>
+<div class="space-y-xs">
+<label class="text-label-md font-label-md text-on-surface-variant" for="email">E-mail</label>
+<input class="w-full h-12 px-md bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" id="email" placeholder="exemplo@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-xs">
+<label class="text-label-md font-label-md text-on-surface-variant" for="subject">Assunto</label>
+<select class="w-full h-12 px-md bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none appearance-none" id="subject">
+<option>Suporte ao Usuário</option>
+<option>Parcerias para Profissionais</option>
+<option>Financeiro</option>
+<option>Outros</option>
+</select>
+</div>
+<div class="space-y-xs">
+<label class="text-label-md font-label-md text-on-surface-variant" for="message">Mensagem</label>
+<textarea class="w-full p-md bg-surface border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none resize-none" id="message" placeholder="Como podemos ajudar?" required="" rows="5"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-md rounded-lg font-label-md text-label-md hover:opacity-95 transform active:scale-[0.98] transition-all flex justify-center items-center gap-sm" type="submit">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+                            Enviar Mensagem
+                        </button>
+</form>
+</div>
+<!-- Right Column: Contact Details -->
+<div class="space-y-lg">
+<div class="space-y-md">
+<h2 class="text-headline-md font-headline-md text-on-surface">Canais de Atendimento</h2>
+<p class="text-body-md text-on-surface-variant">Escolha o canal que preferir. Estamos prontos para atender você com agilidade e transparência.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-lg">
+<!-- Office -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl flex flex-col gap-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<h3 class="font-headline-md text-label-md text-on-surface">Escritório Central</h3>
+<p class="text-body-md text-on-surface-variant">Av. Paulista, 1000 - Bela Vista<br/>São Paulo, SP - 01310-100</p>
+</div>
+<!-- Support Email -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl flex flex-col gap-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<h3 class="font-headline-md text-label-md text-on-surface">E-mail de Suporte</h3>
+<p class="text-body-md text-on-surface-variant">suporte@obracerta.com.br<br/>atendimento@obracerta.com.br</p>
+</div>
+<!-- WhatsApp -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl flex flex-col gap-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="chat" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<h3 class="font-headline-md text-label-md text-on-surface">WhatsApp / Telefone</h3>
+<p class="text-body-md text-on-surface-variant">+55 (11) 99999-0000<br/>0800 123 4567</p>
+</div>
+<!-- Hours -->
+<div class="p-lg bg-surface-container-lowest border border-outline-variant rounded-xl flex flex-col gap-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="schedule" style="font-variation-settings: 'FILL' 1;">schedule</span>
+</div>
+<h3 class="font-headline-md text-label-md text-on-surface">Horário de Funcionamento</h3>
+<p class="text-body-md text-on-surface-variant">Segunda a Sexta: 08h às 18h<br/>Sábados: 08h às 12h</p>
+</div>
+</div>
+<!-- Trust/Brand Visual -->
+<div class="relative overflow-hidden rounded-xl h-48 group">
+<img alt="Professional Construction Site" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional, high-end construction site in São Paulo featuring modern architecture and precise structural elements. The scene is bathed in warm, golden hour sunlight, highlighting the premium quality and reliability of 'Obra Certa' services. The atmosphere is clean, organized, and technologically advanced, reflecting the minimalist and corporate SaaS-inspired interface of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9esfEijnfFU02rYvA_gAX9yM1JlQkaJPGFQDL9AMpxOPU5A2VKtedVXHHrIWHYArf45iLgNwDX4kLZiJglrSpzSViPz6SB7ANUFuuTrCIpnVETiju_2Hhcq4v6agdLfw93MWH_bTfkWx5VChqSC6uP-4Oy7IIRVDI93mUNGG0WUuFNK3T2ylNQLFM_6PS_TwipZdfjHammZkgdxTMhZl9ALAezx7G7cN9QBbrIvsmYum7eWF3xnBkbdKCKHX4h7DQfnMD69Qsm7Gt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-lg">
+<p class="text-white font-headline-md text-label-md">Profissionais verificados em todo o Brasil.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-surface-container-low py-xxl px-lg">
+<div class="max-w-4xl mx-auto space-y-xl text-center">
+<div class="space-y-sm">
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Dúvidas Frequentes</h2>
+<p class="text-body-lg text-on-surface-variant">Encontre respostas rápidas para as perguntas mais comuns dos nossos clientes.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg text-left">
+<a class="p-lg bg-white rounded-xl border border-outline-variant hover:border-primary transition-colors flex items-start gap-md" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="help_outline">help_outline</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Como faço para contratar um profissional?</h4>
+<p class="text-body-md text-on-surface-variant mt-xs">Aprenda o passo a passo seguro para escolher seu prestador.</p>
+</div>
+</a>
+<a class="p-lg bg-white rounded-xl border border-outline-variant hover:border-primary transition-colors flex items-start gap-md" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">O pagamento é seguro?</h4>
+<p class="text-body-md text-on-surface-variant mt-xs">Saiba como funciona nossa garantia de serviço e pagamentos.</p>
+</div>
+</a>
+</div>
+<div class="flex justify-center">
+<a class="inline-flex items-center gap-sm text-primary font-label-md text-label-md hover:underline" href="#">
+                        Veja todas as dúvidas em 'Como Funciona'
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xxl px-lg flex flex-col items-center gap-lg max-w-container-max mx-auto border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between w-full items-center md:items-start gap-xl">
+<div class="space-y-sm text-center md:text-left">
+<span class="text-headline-lg font-headline-lg text-primary">Obra Certa</span>
+<p class="text-body-md text-on-surface-variant max-w-xs">A plataforma definitiva para serviços residenciais e corporativos de alto padrão.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-lg">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all" href="#">About Us</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all" href="#">Contact Support</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-all" href="#">Trust &amp; Safety</a>
+</div>
+</div>
+<div class="w-full pt-lg border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="text-label-sm font-label-sm text-on-surface-variant">© 2024 Obra Certa. Professional Property Services.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="facebook">social_leaderboard</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="camera_alt">camera_alt</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="mail">mail</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalContent = btn.innerHTML;
+            
+            // Visual feedback
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="refresh">refresh</span> Enviando...';
+            btn.disabled = true;
+            btn.classList.add('opacity-70');
+
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span> Enviado com Sucesso!';
+                btn.classList.remove('bg-primary-container');
+                btn.classList.add('bg-tertiary-container', 'text-white');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.remove('bg-tertiary-container', 'text-white');
+                    btn.classList.add('bg-primary-container');
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-70');
+                    this.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Simple scroll reveal
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

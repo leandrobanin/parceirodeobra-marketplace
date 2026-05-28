@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Dashboard - Obra Certa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-container-highest": "#dce2f3",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-tertiary-container": "#004e34",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#d8c3ad",
+                        "outline": "#867461",
+                        "on-tertiary-fixed": "#002113",
+                        "background": "#f9f9ff",
+                        "secondary-fixed-dim": "#c0c6db",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#f59e0b",
+                        "on-surface-variant": "#534434",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-primary-fixed": "#2a1700",
+                        "inverse-primary": "#ffb95f",
+                        "on-secondary-fixed-variant": "#404758",
+                        "surface-container-low": "#f0f3ff",
+                        "primary-fixed": "#ffddb8",
+                        "surface-bright": "#f9f9ff",
+                        "primary": "#855300",
+                        "on-primary-fixed-variant": "#653e00",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#dce2f7",
+                        "surface-dim": "#d3daea",
+                        "on-secondary-fixed": "#141b2b",
+                        "inverse-surface": "#2a313d",
+                        "primary-fixed-dim": "#ffb95f",
+                        "on-primary-container": "#613b00",
+                        "surface-container": "#e7eefe",
+                        "on-secondary-container": "#5c6274",
+                        "secondary-container": "#d9dff5",
+                        "secondary": "#575e70",
+                        "on-surface": "#151c27",
+                        "on-error": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#30c88f",
+                        "surface-variant": "#dce2f3",
+                        "surface": "#f9f9ff",
+                        "surface-container-high": "#e2e8f8",
+                        "inverse-on-surface": "#ebf1ff",
+                        "tertiary": "#006c49",
+                        "on-background": "#151c27",
+                        "surface-tint": "#855300",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "8px",
+                        "md": "16px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "xxl": "48px",
+                        "xl": "32px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background h-full flex antialiased">
+<!-- SideNavBar Component -->
+<nav class="hidden md:flex flex-col bg-surface-container-lowest border-r border-outline-variant shadow-sm docked left-0 h-full w-64 p-md z-40 fixed top-0">
+<div class="mb-lg">
+<h1 class="text-headline-md font-headline-md text-primary font-bold">Obra Certa</h1>
+</div>
+<div class="flex items-center gap-md mb-xl p-sm">
+<img alt="Professional Profile Photo" class="w-12 h-12 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a confident male contractor in a clean, modern workspace. The lighting is bright and even, highlighting his professional attire. The background is a slightly blurred, high-end residential interior setting, conveying trust and premium service quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrw41mFxboIH0_s2lVR_XJhd3LgufJKaWl0rswsCsYzc_xG6izr-YEKCeCH-s84IQBC7g_Ppv4uY_jQ15xoejM_fl2LSZ8iuriOZXLFlxxZAAclJhniq5HAX38ZHN63MY02dFHYPnfLgLA1zJw7API2TEp4GWjwZQ0luDgV0w-fFhriU8Ws5CUxIuHgOby4rY50Y-fFzj86aB80BROLKwZ8mWQR6drdMnwVzkS7Y0esHRe3cQT3YvYA3nDUjyOA6EmxSckLw5vFakX"/>
+<div>
+<h2 class="text-label-md font-label-md text-on-surface">Professional Dashboard</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Manage your property services</p>
+</div>
+</div>
+<ul class="flex-1 space-y-sm text-label-md font-label-md">
+<li>
+<a class="text-on-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="work_outline">work_outline</span>
+                    Project Leads
+                </a>
+</li>
+<li>
+<a class="bg-primary-container text-on-primary-container rounded-lg px-md py-sm flex items-center gap-md scale-[0.98] duration-150 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+                    My Profile
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                    Earnings
+                </a>
+</li>
+<li>
+<a class="text-on-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </a>
+</li>
+</ul>
+<div class="mt-auto pt-lg border-t border-outline-variant space-y-sm text-label-md font-label-md">
+<a class="text-on-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                Help Center
+            </a>
+<a class="text-on-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logout
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 p-lg md:p-xl h-full overflow-y-auto bg-surface">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-xl gap-md">
+<div>
+<h1 class="text-headline-lg font-headline-lg text-on-surface">My Profile</h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-xs">Manage your public presence and availability.</p>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center bg-surface-container-lowest border border-outline-variant rounded-full px-md py-sm shadow-sm">
+<span class="text-label-md font-label-md text-on-surface mr-sm">Availability:</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+<span class="ml-3 text-label-md font-label-md text-on-surface">Available Now</span>
+</label>
+</div>
+<button class="bg-primary text-on-primary text-label-md font-label-md px-lg py-sm rounded-lg hover:opacity-90 transition-opacity">
+                    View Public Profile
+                </button>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-xl">
+<!-- Performance Overview (Spans 2 columns) -->
+<section class="md:col-span-2 bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm">
+<h2 class="text-headline-md font-headline-md text-on-surface mb-lg">Profile Performance</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-md">
+<div class="p-md rounded-lg bg-surface-container-low border border-surface-container-highest">
+<div class="flex items-center gap-sm text-on-surface-variant mb-xs">
+<span class="material-symbols-outlined text-[20px]" data-icon="visibility">visibility</span>
+<span class="text-label-sm font-label-sm">Profile Views</span>
+</div>
+<p class="text-display-lg font-display-lg text-on-surface">1,248</p>
+<p class="text-label-sm font-label-sm text-tertiary flex items-center gap-xs mt-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span>
+                            +12% this month
+                        </p>
+</div>
+<div class="p-md rounded-lg bg-surface-container-low border border-surface-container-highest">
+<div class="flex items-center gap-sm text-on-surface-variant mb-xs">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+<span class="text-label-sm font-label-sm">Inquiries</span>
+</div>
+<p class="text-display-lg font-display-lg text-on-surface">42</p>
+<p class="text-label-sm font-label-sm text-tertiary flex items-center gap-xs mt-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span>
+                            +5% this month
+                        </p>
+</div>
+<div class="p-md rounded-lg bg-surface-container-low border border-surface-container-highest">
+<div class="flex items-center gap-sm text-on-surface-variant mb-xs">
+<span class="material-symbols-outlined text-[20px]" data-icon="star">star</span>
+<span class="text-label-sm font-label-sm">Average Rating</span>
+</div>
+<p class="text-display-lg font-display-lg text-on-surface">4.9</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-sm">
+                            Based on 128 reviews
+                        </p>
+</div>
+</div>
+</section>
+<!-- Quick Edit / Status -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm flex flex-col justify-between">
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-md">Profile Status</h2>
+<div class="flex items-center gap-sm mb-lg">
+<span class="bg-primary-container text-on-primary-container text-label-sm font-label-sm px-sm py-xs rounded-full flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified">verified</span>
+                            Verified Pro
+                        </span>
+<span class="bg-surface-container-highest text-on-surface text-label-sm font-label-sm px-sm py-xs rounded-full">
+                            Premium Tier
+                        </span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mb-lg">Your profile is currently visible to homeowners in your primary service area.</p>
+</div>
+<button class="w-full bg-surface-container-lowest border border-outline text-on-surface text-label-md font-label-md px-lg py-sm rounded-lg hover:bg-surface-container-low transition-colors flex justify-center items-center gap-sm">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+                    Edit Profile Details
+                </button>
+</section>
+</div>
+<!-- Lower Section: Gallery & Reviews -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+<!-- Gallery Management -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex justify-between items-center mb-lg">
+<h2 class="text-headline-md font-headline-md text-on-surface">Portfolio Gallery</h2>
+<button class="text-primary text-label-md font-label-md flex items-center gap-xs hover:underline">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_photo_alternate">add_photo_alternate</span>
+                        Upload New
+                    </button>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-sm">
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden group relative">
+<img alt="Completed Project" class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A close-up view of newly installed, high-end modern kitchen cabinetry. The wood finish is flawless and the lighting highlights the precision of the carpentry work. The overall mood is clean, professional, and indicative of premium property maintenance services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR_Cof2dQzavwqsBjA70GCraw3sIIuSMEkwCl6xvEJpFFvQs8poMc-G40OJVoVwMPSynAdgRYJ3fBfKmpSu5bFgxZjLpFOZ2pBr70WkPobxHHaMTIiUEg2-ou2hUFajsVc3NtIn9ak-JNf8flM3qwWI71afKdDOg7SarhekC8y1MsTAplmD9EE09mO-GHf00odAarkOaDXylI-8rFJmSUyiY4I0BTfJVhv2Ox4S7TKZ92dt_T4O2PcVLH6KEXJCvyyB8coUvdwP-W_"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-sm">
+<button class="text-white p-xs rounded-full hover:bg-white/20"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-white p-xs rounded-full hover:bg-white/20"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low overflow-hidden group relative">
+<img alt="Completed Project" class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="A pristine, freshly painted living room interior in a modern home. The walls are a smooth, bright white, contrasting with dark hardwood floors. Sunlight streams through large windows, emphasizing the high-quality finish and attention to detail of the painting service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_BMfM17vhRWQVqqH0Ou3SJczKAk8E_TMyhFxLn4a_SsFaoWwd6YMhs4sjx1ix7Ez8GYAWzWmHQ5NDKtn5bnnqkdDTzX2cthbxuoBk_j3qgIsgLEvQ9czsCp2Ymvnq_MBUPUdnQ9LFM9dZ1j5NpHM1h3c5leuzWGliDp_AlRtCzaf2mFvMuQa0Rx1_yu-8eQXefQw3SGYWOek_qB6-Ti9LsB7vV9LX0PfQNNkgx8lZK7qNfEz-aFAgMItAS9dim4gqbspjLMsruiH9"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-sm">
+<button class="text-white p-xs rounded-full hover:bg-white/20"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-white p-xs rounded-full hover:bg-white/20"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</div>
+<div class="aspect-square rounded-lg bg-surface-container-low border-2 border-dashed border-outline-variant flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest hover:border-primary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[32px] mb-xs" data-icon="upload">upload</span>
+<span class="text-label-sm font-label-sm">Add Photo</span>
+</div>
+</div>
+</section>
+<!-- Recent Reviews -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm">
+<div class="flex justify-between items-center mb-lg">
+<h2 class="text-headline-md font-headline-md text-on-surface">Recent Reviews</h2>
+<a class="text-primary text-label-md font-label-md hover:underline" href="#">View All</a>
+</div>
+<div class="space-y-md">
+<!-- Review Item 1 -->
+<div class="pb-md border-b border-outline-variant last:border-0 last:pb-0">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="text-label-md font-label-md text-on-surface">Sarah Jenkins</h3>
+<div class="flex text-primary-container text-[16px]">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">2 days ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">"Incredible attention to detail on the custom shelving. Arrived on time, was very professional, and left the workspace spotless. Highly recommended!"</p>
+</div>
+<!-- Review Item 2 -->
+<div class="pb-md border-b border-outline-variant last:border-0 last:pb-0">
+<div class="flex justify-between items-start mb-sm">
+<div>
+<h3 class="text-label-md font-label-md text-on-surface">Michael R.</h3>
+<div class="flex text-primary-container text-[16px]">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-icon="star_half">star_half</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">1 week ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">"Great plumbing repair job. Fast and efficient. Only minor issue was a slight delay in initial response, but the work itself was flawless."</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>

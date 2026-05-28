@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - Obra Certa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#6ffbbe",
+                      "surface-container-highest": "#dce2f3",
+                      "on-tertiary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "on-tertiary-container": "#004e34",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#d8c3ad",
+                      "outline": "#867461",
+                      "on-tertiary-fixed": "#002113",
+                      "background": "#f9f9ff",
+                      "secondary-fixed-dim": "#c0c6db",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#f59e0b",
+                      "on-surface-variant": "#534434",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "on-primary-fixed": "#2a1700",
+                      "inverse-primary": "#ffb95f",
+                      "on-secondary-fixed-variant": "#404758",
+                      "surface-container-low": "#f0f3ff",
+                      "primary-fixed": "#ffddb8",
+                      "surface-bright": "#f9f9ff",
+                      "primary": "#855300",
+                      "on-primary-fixed-variant": "#653e00",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#dce2f7",
+                      "surface-dim": "#d3daea",
+                      "on-secondary-fixed": "#141b2b",
+                      "inverse-surface": "#2a313d",
+                      "primary-fixed-dim": "#ffb95f",
+                      "on-primary-container": "#613b00",
+                      "surface-container": "#e7eefe",
+                      "on-secondary-container": "#5c6274",
+                      "secondary-container": "#d9dff5",
+                      "secondary": "#575e70",
+                      "on-surface": "#151c27",
+                      "on-error": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#30c88f",
+                      "surface-variant": "#dce2f3",
+                      "surface": "#f9f9ff",
+                      "surface-container-high": "#e2e8f8",
+                      "inverse-on-surface": "#ebf1ff",
+                      "tertiary": "#006c49",
+                      "on-background": "#151c27",
+                      "surface-tint": "#855300",
+                      "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "sm": "8px",
+                      "md": "16px",
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "xs": "4px",
+                      "lg": "24px",
+                      "xxl": "48px",
+                      "xl": "32px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F9FAFB; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background flex h-screen overflow-hidden">
+<!-- SideNavBar (from JSON logic, adapted for Admin context while keeping JSON style structure) -->
+<aside class="hidden md:flex bg-surface-container-lowest dark:bg-inverse-surface text-label-md font-label-md border-r border-outline-variant dark:border-outline shadow-sm fixed left-0 top-0 h-screen w-64 flex-col p-md z-40">
+<div class="mb-xl flex items-center gap-sm mt-sm px-sm">
+<span class="text-headline-md font-headline-md text-primary font-bold">Obra Certa</span>
+<span class="bg-primary-container text-on-primary-container text-xs px-2 py-1 rounded-full font-bold ml-auto">ADMIN</span>
+</div>
+<nav class="flex-1 flex flex-col gap-sm">
+<a class="bg-primary-container text-on-primary-container rounded-lg px-md py-sm flex items-center gap-md scale-[0.98] duration-150 transition-all" href="#">
+<span class="material-symbols-outlined fill text-[20px]">dashboard</span>
+                Dashboard
+            </a>
+<a class="text-on-surface-variant dark:text-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">group</span>
+                Users &amp; Pros
+            </a>
+<a class="text-on-surface-variant dark:text-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+                Approvals
+            </a>
+<a class="text-on-surface-variant dark:text-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">category</span>
+                Categories
+            </a>
+<a class="text-on-surface-variant dark:text-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+                Financials
+            </a>
+</nav>
+<div class="mt-auto flex flex-col gap-sm border-t border-outline-variant pt-md">
+<a class="text-on-surface-variant dark:text-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+                Platform Settings
+            </a>
+<a class="text-on-surface-variant dark:text-surface-variant px-md py-sm flex items-center gap-md hover:bg-surface-container-low dark:hover:bg-surface-container-high transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-y-auto bg-[#F9FAFB]">
+<!-- Top Bar for Canvas -->
+<header class="bg-surface-container-lowest border-b border-outline-variant px-lg h-20 flex items-center justify-between sticky top-0 z-30 shadow-sm md:shadow-none">
+<div class="flex items-center gap-md md:hidden">
+<button class="text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<span class="text-headline-md font-headline-md text-primary font-bold">Obra Certa</span>
+</div>
+<div class="hidden md:flex flex-col">
+<h1 class="text-headline-md font-headline-md text-on-surface">Platform Overview</h1>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Real-time metrics and system status.</p>
+</div>
+<div class="flex items-center gap-lg">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-lg text-label-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors w-64" placeholder="Search users, IDs..." type="text"/>
+</div>
+<button class="relative text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border border-surface-container-lowest"></span>
+</button>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border border-outline-variant overflow-hidden">
+<img alt="Admin Avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged man in a smart casual outfit, used as an avatar. Soft, bright studio lighting against a clean white background. Modern, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3RECfNTRsA_JnVgEyzjL-YYn-Igb7zHsoeozQqKUY247yKALuYqGvxtJ-i_zW8s5k4Gw7tI0tJPGKz6hB5X280t7pG9q1EX-MGtW4LxLRwgBogbkUvE_0kawwkae-4VDfu5Hr_WxwCvQV0kQVs7ZPhBJK1JMwQrF50985rm9pop8qoHRJT2QkEri-RC5S7HyOZ45zlXow3GhJlCTm1BOO5F_O6xJH-1eYDNHkMmKgum-cMg52H1L9JinYiVZpsLF-6bIelUAIuvyL"/>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-md md:p-lg lg:p-xl max-w-container-max mx-auto w-full space-y-xl">
+<!-- Key Metrics Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant hover:shadow-[0px_10px_15px_-3px_rgba(17,24,39,0.05)] transition-shadow">
+<div class="flex items-start justify-between mb-sm">
+<div class="p-2 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-[24px]">engineering</span>
+</div>
+<span class="bg-tertiary-container/20 text-tertiary text-xs px-2 py-1 rounded-full font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+                            12%
+                        </span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-xs">Total Professionals</p>
+<h3 class="text-headline-lg font-headline-lg text-on-surface">4,289</h3>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant hover:shadow-[0px_10px_15px_-3px_rgba(17,24,39,0.05)] transition-shadow">
+<div class="flex items-start justify-between mb-sm">
+<div class="p-2 bg-surface-container-low rounded-lg text-secondary">
+<span class="material-symbols-outlined text-[24px]">real_estate_agent</span>
+</div>
+<span class="bg-tertiary-container/20 text-tertiary text-xs px-2 py-1 rounded-full font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+                            8.5%
+                        </span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-xs">Total Customers</p>
+<h3 class="text-headline-lg font-headline-lg text-on-surface">12,504</h3>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant hover:shadow-[0px_10px_15px_-3px_rgba(17,24,39,0.05)] transition-shadow">
+<div class="flex items-start justify-between mb-sm">
+<div class="p-2 bg-surface-container-low rounded-lg text-primary">
+<span class="material-symbols-outlined text-[24px]">handshake</span>
+</div>
+<span class="bg-error-container/50 text-on-error-container text-xs px-2 py-1 rounded-full font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trending_down</span>
+                            2.1%
+                        </span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-xs">Active Hires (30d)</p>
+<h3 class="text-headline-lg font-headline-lg text-on-surface">892</h3>
+</div>
+<!-- Metric Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-md border border-outline-variant hover:shadow-[0px_10px_15px_-3px_rgba(17,24,39,0.05)] transition-shadow">
+<div class="flex items-start justify-between mb-sm">
+<div class="p-2 bg-primary-container/20 rounded-lg text-primary">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<span class="bg-tertiary-container/20 text-tertiary text-xs px-2 py-1 rounded-full font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">trending_up</span>
+                            24%
+                        </span>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant mb-xs">Platform Revenue (YTD)</p>
+<h3 class="text-headline-lg font-headline-lg text-on-surface">$142.5K</h3>
+</div>
+</section>
+<!-- Main Layout Grid (Chart + Pending Actions) -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Chart Area -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl border border-outline-variant p-md flex flex-col min-h-[400px]">
+<div class="flex justify-between items-center mb-md">
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface text-lg">Platform Growth</h2>
+<p class="text-label-sm font-label-sm text-on-surface-variant">New user acquisitions over time</p>
+</div>
+<select class="bg-surface border border-outline-variant text-label-sm rounded-lg px-3 py-1 outline-none focus:border-primary">
+<option>Last 6 Months</option>
+<option>This Year</option>
+<option>All Time</option>
+</select>
+</div>
+<!-- Faux Chart Area (CSS representation) -->
+<div class="flex-1 relative mt-4 border-l border-b border-outline-variant flex items-end justify-between px-2 pb-2 gap-2">
+<!-- Y-axis labels -->
+<div class="absolute left-[-30px] bottom-0 h-full flex flex-col justify-between text-label-sm text-on-surface-variant py-2">
+<span>5k</span>
+<span>4k</span>
+<span>3k</span>
+<span>2k</span>
+<span>1k</span>
+<span>0</span>
+</div>
+<!-- Bars/Lines representation -->
+<div class="w-1/6 bg-surface-container-low h-[30%] rounded-t-sm relative group"><div class="absolute inset-0 bg-primary-container/20 hidden group-hover:block"></div></div>
+<div class="w-1/6 bg-surface-container-low h-[45%] rounded-t-sm relative group"><div class="absolute inset-0 bg-primary-container/20 hidden group-hover:block"></div></div>
+<div class="w-1/6 bg-surface-container-low h-[40%] rounded-t-sm relative group"><div class="absolute inset-0 bg-primary-container/20 hidden group-hover:block"></div></div>
+<div class="w-1/6 bg-surface-container-low h-[65%] rounded-t-sm relative group"><div class="absolute inset-0 bg-primary-container/20 hidden group-hover:block"></div></div>
+<div class="w-1/6 bg-surface-container-low h-[80%] rounded-t-sm relative group"><div class="absolute inset-0 bg-primary-container/20 hidden group-hover:block"></div></div>
+<div class="w-1/6 bg-primary-container/40 h-[95%] rounded-t-sm border-t-2 border-primary relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface-container-lowest text-xs px-2 py-1 rounded shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">4.8k</div>
+</div>
+<!-- X-axis labels -->
+<div class="absolute bottom-[-24px] left-0 w-full flex justify-between text-label-sm text-on-surface-variant px-4">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+</div>
+<!-- Grid lines -->
+<div class="absolute left-0 bottom-[20%] w-full h-[1px] bg-outline-variant/30"></div>
+<div class="absolute left-0 bottom-[40%] w-full h-[1px] bg-outline-variant/30"></div>
+<div class="absolute left-0 bottom-[60%] w-full h-[1px] bg-outline-variant/30"></div>
+<div class="absolute left-0 bottom-[80%] w-full h-[1px] bg-outline-variant/30"></div>
+</div>
+</div>
+<!-- Pending Approvals -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant flex flex-col">
+<div class="p-md border-b border-outline-variant flex justify-between items-center bg-surface-bright rounded-t-xl">
+<h2 class="text-label-md font-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">pending_actions</span>
+                            Pending Pro Approvals
+                        </h2>
+<span class="bg-error text-on-error text-xs px-2 py-0.5 rounded-full">12</span>
+</div>
+<div class="flex-1 overflow-y-auto max-h-[400px]">
+<!-- Item 1 -->
+<div class="p-md border-b border-outline-variant hover:bg-surface-container-low transition-colors flex flex-col gap-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-surface-dim overflow-hidden">
+<img alt="Applicant Avatar" class="w-full h-full object-cover" data-alt="Close up headshot of a smiling young male professional contractor wearing a dark shirt. Bright outdoor natural lighting. Modern corporate portrait style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu_q4Y0gGkvptRYVvmX8paPnK3U6-W5heLYk6saSIZHqZXULAT54nWTgomkzqIwrlZWkL6Di9wX7AIL5Vi5-eulyYws9DsFbFRPUY1YMKrlcvEkvGZcE8J1TtH4UhO62ssIFLQ3bkieANcyrh5vUdA2BzFNMxbnyM2Gm1ejuIVgh-sxvkOnIrns-cP9OS9CSyHmSSh_n9TyfP6qXElgc32WInjMyx6O86RKznN1WaZf4rcX9hxA6OYkBORhFvuwKZOXTLNgCXOVP2c"/>
+</div>
+<div class="flex-1">
+<p class="text-label-md font-label-md text-on-surface">Carlos Silva</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Electrician • São Paulo</p>
+</div>
+</div>
+<div class="flex gap-2 mt-1">
+<button class="flex-1 bg-surface border border-outline-variant text-on-surface text-label-sm font-label-sm py-1.5 rounded-lg hover:bg-surface-container-highest transition-colors">Review Docs</button>
+<button class="flex-1 bg-primary text-on-primary text-label-sm font-label-sm py-1.5 rounded-lg hover:bg-primary-fixed-variant transition-colors">Approve</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-md border-b border-outline-variant hover:bg-surface-container-low transition-colors flex flex-col gap-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-surface-dim overflow-hidden flex items-center justify-center text-primary font-bold">
+                                    MR
+                                </div>
+<div class="flex-1">
+<p class="text-label-md font-label-md text-on-surface">Maria Ribeiro</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Interior Painter • Rio de Janeiro</p>
+</div>
+</div>
+<div class="flex gap-2 mt-1">
+<button class="flex-1 bg-surface border border-outline-variant text-on-surface text-label-sm font-label-sm py-1.5 rounded-lg hover:bg-surface-container-highest transition-colors">Review Docs</button>
+<button class="flex-1 bg-primary text-on-primary text-label-sm font-label-sm py-1.5 rounded-lg hover:bg-primary-fixed-variant transition-colors">Approve</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-md hover:bg-surface-container-low transition-colors flex flex-col gap-sm">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-surface-dim overflow-hidden">
+<img alt="Applicant Avatar" class="w-full h-full object-cover" data-alt="Headshot of a confident older male professional with gray hair. Neutral gray background, studio lighting. High-end corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDNN2_j813NKCapB89RdwpmtGK2-v5v7E9k8unE6_PXEsOR1zLiJFq5E5uodzuNCT10eUhq98MAjkkov905S-eFS1AdhCEXhgym-oBapEWBwmSK7LTvSkoN2wgxrXVkZ6ctykQMAmLw28XUDr8py0W7UGPGpP8flksT-BM1DqVcxUsbOfmfUe-YnZYDeIaazcIQwOIlkOjqb5awd9IDiI_b9cZaUPRzyyqY9W2Qk3Vhvct2KqI4KoV0yX8clh8KkahPE149Oxq65GJ"/>
+</div>
+<div class="flex-1">
+<p class="text-label-md font-label-md text-on-surface">João Santos</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Plumber • Curitiba</p>
+</div>
+</div>
+<div class="flex gap-2 mt-1">
+<button class="flex-1 bg-surface border border-outline-variant text-on-surface text-label-sm font-label-sm py-1.5 rounded-lg hover:bg-surface-container-highest transition-colors">Review Docs</button>
+<button class="flex-1 bg-primary text-on-primary text-label-sm font-label-sm py-1.5 rounded-lg hover:bg-primary-fixed-variant transition-colors">Approve</button>
+</div>
+</div>
+</div>
+<div class="p-sm border-t border-outline-variant bg-surface-bright rounded-b-xl text-center">
+<a class="text-primary font-label-sm text-label-sm hover:underline" href="#">View All Applications</a>
+</div>
+</div>
+</section>
+</div>
+</main>
+</body></html>
